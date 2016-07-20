@@ -1,9 +1,13 @@
 var Express = require("express");
 var app = Express();
 
-app.get("/hello", function(request, response) {
+var motivations = require("motivations");
+var pickOne = require("pick-one");
+
+app.get("/", function(request, response) {
     console.log("request to /hello");
-    response.send("hello!");
+    var motivation = pickOne(motivations);
+    response.send(motivation);
 });
 
 module.exports = app;
