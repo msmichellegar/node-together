@@ -1,1 +1,3 @@
-# node-together
+# Node Together
+
+Hello world! :)
